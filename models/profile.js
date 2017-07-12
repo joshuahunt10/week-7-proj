@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 const profileSchema = new mongoose.Schema({
   username: {type: String, required: true},
+  password: {type: String, required: true},
   activities: [{
     activity: {type: String, required: true},
-    date: {type: Number},
-    howMany: {type:Number}
+    id: {type: String, required: true}
   }]
 })
 
