@@ -28,11 +28,11 @@ mongoose.connect('mongodb://localhost:27017/activityDB');
 // // Add a new activity
 // var sport = new Activities()
 // sport.userID = '59669a716fed644454683015'
-// sport.activity = 'walking'
-// sport.units = 'steps'
+// sport.activity = 'cycle_delete'
+// sport.units = 'miles'
 // sport.stats.push({
 //   date: Date.now(),
-//   howMany: 5000
+//   howMany: 30
 // })
 // sport.save().then(function(sport){
 //   Profile.findOne({'_id': '59669a716fed644454683015'})
@@ -44,6 +44,16 @@ mongoose.connect('mongodb://localhost:27017/activityDB');
 //     person.save()
 //   })
 // })
+
+// Profile.update(
+//   {'_id': '59669a716fed644454683015'},
+//   {$pull: { activities: {id: '5966a52fe5155e4b74af982b'}}},
+//   {multi:true}
+// )
+// .then(function(show){
+//   console.log(show);
+// })
+
 
 
 
