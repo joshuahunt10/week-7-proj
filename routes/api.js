@@ -50,7 +50,6 @@ router.put('/activities/:sportID', function( req, res){
       .then(function(user){
         for (var i = 0; i < user.activities.length; i++) {
           if(user.activities[i].activity === oldActivity){
-            console.log('in the in statment');
             user.activities[i].activity = req.body.activity
           }
         }
@@ -76,7 +75,6 @@ router.delete('/activities/:sportID', function(req, res){
         {multi:true}
       )
       .then(function(user){
-        console.log(user);
         res.json({user: user})
       })
     })

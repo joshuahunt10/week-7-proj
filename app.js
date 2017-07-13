@@ -18,46 +18,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost:27017/activityDB');
 
-// Make a new person.
-// var person = new Profile()
-// person.username = "josh"
-// person.password = "123"
-// person.activities.push({activity: 'stairs', date: Date.now(), howMany: 15, units: 'cases'});
-// person.save();
-
-// // Add a new activity
-// var sport = new Activities()
-// sport.userID = '59669a716fed644454683015'
-// sport.activity = 'cycle_delete'
-// sport.units = 'miles'
-// sport.stats.push({
-//   date: Date.now(),
-//   howMany: 30
-// })
-// sport.save().then(function(sport){
-//   Profile.findOne({'_id': '59669a716fed644454683015'})
-//   .then(function(person){
-//     person.activities.push({
-//       activity: sport.activity,
-//       id: sport._id
-//     })
-//     person.save()
-//   })
-// })
-
-// Profile.update(
-//   {'_id': '59669a716fed644454683015'},
-//   {$pull: { activities: {id: '5966a52fe5155e4b74af982b'}}},
-//   {multi:true}
-// )
-// .then(function(show){
-//   console.log(show);
-// })
-
-
-
-
-
 passport.use(new BasicStrategy(
   function(username, password, done) {
 
