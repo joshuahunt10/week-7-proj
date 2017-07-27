@@ -1,6 +1,7 @@
 const express = require("express");
 const mustache = require("mustache-express");
 const bodyParser = require("body-parser");
+const session = require("express-session");
 const passport = require('passport');
 const BasicStrategy = require('passport-http').BasicStrategy;
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost:27017/activityDB');
+mongoose.connect('mongodb://localhost:27017/activityDB')
 
 passport.use(new BasicStrategy(
   function(username, password, done) {
